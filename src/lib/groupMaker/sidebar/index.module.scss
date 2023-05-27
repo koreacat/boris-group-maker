@@ -1,0 +1,161 @@
+.sidebarArea {
+  width: 260px;
+  min-width: 260px;
+
+  .sidebarWrap {
+    position: sticky;
+    top: 12px;
+    padding: 24px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1), 0 4px 6px rgba(0, 0, 0, .05);
+    border-radius: 12px;
+
+    .inputArea {
+      &~.inputArea {
+        margin-top: 20px;
+      }
+
+      .title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #212529;
+        font-weight: bold;
+      }
+
+      .inputWrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        background: #f5f6f7;
+        border-radius: 4px;
+        margin-top: 10px;
+        border: 2px solid transparent;
+
+        .input {
+          width: 100%;
+          padding: 0;
+          font-size: 16px;
+          line-height: 24px;
+          border: none;
+          outline: none;
+          background: none;
+          color: #25282b;
+
+          &:disabled {
+            color: lightgray;
+            cursor: not-allowed;
+          }
+        }
+
+        &.blinking {
+          animation: blink 1s ease-in-out infinite alternate;
+        }
+      }
+    }
+
+    .radioArea {
+      display: flex;
+      margin-top: 10px;
+      gap: 6px;
+
+      .radioWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .radioTitle {
+          font-size: 14px;
+        }
+
+        input[type="radio"]+span {
+          color: #aaa;
+        }
+
+        input[type="radio"]:checked+span {
+          font-weight: bold;
+          color: #25282b;
+        }
+
+        input[type="radio"]:disabled+span {
+          cursor: not-allowed;
+          color: lightgray;
+        }
+      }
+    }
+
+    .buttonWrap {
+      margin-top: 20px;
+
+      .button {
+        width: 100%;
+        padding: 11px 25px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        background-color: #343a40;
+        color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+
+    .descWrap {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+
+      .title {
+        margin-bottom: 6px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #212529;
+        font-weight: bold;
+      }
+
+      .desc {
+        font-size: 14px;
+        line-height: 24px;
+        color: #212529;
+
+        .rectTitleWrap {
+          display: inline-block;
+
+          .rect {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            transform: translate(0, 1.5px);
+
+            &.yellow {
+              background: yellow;
+            }
+
+            &.gray {
+              background: lightgray;
+              opacity: .5;
+            }
+          }
+
+          .title {
+            font-weight: bold;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@keyframes blink{
+  0% {border-color: #25282b;}
+  100% {border-color: 1;}
+}
