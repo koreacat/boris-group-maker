@@ -1,4 +1,5 @@
 {
+  "homepage": ".",
   "name": "boris-react-group-maker",
   "version": "1.0.0",
   "private": false,
@@ -11,12 +12,18 @@
     "email": "koreacat0w0@gmail.com",
     "url": "https://github.com/koreacat"
   },
-  "keywords": ["boris", "react", "group", "maker"],
+  "keywords": [
+    "boris",
+    "react",
+    "group",
+    "maker"
+  ],
   "dependencies": {
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "classnames": "^2.2.6",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -28,7 +35,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
