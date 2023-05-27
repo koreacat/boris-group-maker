@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "./groupPicker/static/css/main.8113761d.css",
+    "main.js": "./groupPicker/static/js/main.225c6694.js",
+    "index.html": "./groupPicker/index.html",
+    "main.8113761d.css.map": "./groupPicker/static/css/main.8113761d.css.map",
+    "main.225c6694.js.map": "./groupPicker/static/js/main.225c6694.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8113761d.css",
+    "static/js/main.225c6694.js"
+  ]
+}
