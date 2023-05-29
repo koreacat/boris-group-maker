@@ -78,8 +78,8 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
       <div className={cx('sidebarWrap', mode)}>
         <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>총 인원 수</span>
-          <div className={cx('inputWrap', { blinking: data.length === 0})}>
-            <input className={cx('input')} type="number" min={0} max={500} value={data.length} onChange={handleChangeNumber} disabled={mode === 'RESULT'}/>
+          <div className={cx('inputWrap', { blinking: data.length === 0 })}>
+            <input className={cx('input')} type="number" min={0} max={500} value={data.length} onChange={handleChangeNumber} disabled={mode === 'RESULT'} />
           </div>
         </div>
 
@@ -88,11 +88,11 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
 
           <div className={cx('radioArea')}>
             <label className={cx('radioWrap')}>
-              <input className={cx('radio')} type="radio" name="groupType" value="NUMBER" onChange={handleChangeGroupType} checked={groupType === 'NUMBER'}  disabled={mode === 'RESULT'}/>
+              <input className={cx('radio')} type="radio" name="groupType" value="NUMBER" onChange={handleChangeGroupType} checked={groupType === 'NUMBER'} disabled={mode === 'RESULT'} />
               <span className={cx('radioTitle')}>한 모둠당 모둠원 수</span>
             </label>
             <label className={cx('radioWrap')}>
-              <input className={cx('radio')} type="radio" name="groupType" value="GROUP" onChange={handleChangeGroupType} checked={groupType === 'GROUP'}  disabled={mode === 'RESULT'}/>
+              <input className={cx('radio')} type="radio" name="groupType" value="GROUP" onChange={handleChangeGroupType} checked={groupType === 'GROUP'} disabled={mode === 'RESULT'} />
               <span className={cx('radioTitle')}>총 모둠 수</span>
             </label>
           </div>
@@ -100,8 +100,8 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
 
         <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>{groupType === 'NUMBER' ? '모둠원 수' : '모둠 수'}</span>
-          <div className={cx('inputWrap', { blinking: groupNumber === 0})}>
-            <input className={cx('input')} type="number" min={0} max={500} value={groupNumber} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'}/>
+          <div className={cx('inputWrap', { blinking: groupNumber === 0 })}>
+            <input className={cx('input')} type="number" min={0} max={500} value={groupNumber} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'} />
           </div>
         </div>
 
@@ -119,7 +119,7 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
         <ol className={cx('descWrap')}>
           <strong className={cx('title')}>도움말</strong>
           <li className={cx('desc')}>1. 총 인원 수를 숫자로 입력해주세요.</li>
-          <li className={cx('desc')}>2. 모둠 구성 방식을 선택하고 수를 입력해주세요.</li>
+          <li className={cx('desc')}>2. 모둠 구성 방식을 선택하고, 한 모둠당 모둠원 수나 총 모둠 수를 입력해주세요.</li>
           <li className={cx('desc')}>
             3. 번호를 클릭하면{' '}
             <div className={cx('rectTitleWrap')}>
@@ -136,6 +136,21 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
             </div>됩니다.
           </li>
           <li className={cx('desc')}>4. 만들기를 클릭해주세요.</li>
+        </ol>
+
+        <ol className={cx('mobileDescWrap')}>
+          <div className={cx('rectTitleWrap')}>
+            <div className={cx('rect')} />
+            <span className={cx('title')}>모둠원</span>
+          </div>
+          <div className={cx('rectTitleWrap')}>
+            <div className={cx('rect', 'yellow')} />
+            <span className={cx('title')}>모둠장</span>
+          </div>
+          <div className={cx('rectTitleWrap')}>
+            <div className={cx('rect', 'gray')} />
+            <span className={cx('title')}>제외</span>
+          </div>
         </ol>
       </div>
     </aside>
