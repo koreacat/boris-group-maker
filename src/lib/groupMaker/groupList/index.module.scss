@@ -1,13 +1,12 @@
 .groupArea {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
 
   .groupWrap {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 12px;
 
     .inputWrap {
       position: relative;
@@ -16,11 +15,10 @@
       padding: 10px 12px;
       background: #f5f6f7;
       border-radius: 4px;
-      margin-top: 10px;
       border: 2px solid transparent;
 
       .input {
-        width: 230px;
+        width: 210px;
         padding: 0;
         font-weight: 500;
         font-size: 24px;
@@ -37,7 +35,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      width: 240px;
+      width: 100%;
       padding: 12px;
       margin-top: 10px;
       background: #ffe4e1;

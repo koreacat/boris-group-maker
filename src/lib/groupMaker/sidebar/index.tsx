@@ -75,15 +75,15 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
 
   return (
     <aside className={cx('sidebarArea')}>
-      <div className={cx('sidebarWrap')}>
-        <div className={cx('inputArea')}>
+      <div className={cx('sidebarWrap', mode)}>
+        <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>총 인원 수</span>
           <div className={cx('inputWrap', { blinking: data.length === 0})}>
             <input className={cx('input')} type="number" min={0} max={500} value={data.length} onChange={handleChangeNumber} disabled={mode === 'RESULT'}/>
           </div>
         </div>
 
-        <div className={cx('inputArea')}>
+        <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>모둠 구성 방식</span>
 
           <div className={cx('radioArea')}>
@@ -98,21 +98,21 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
           </div>
         </div>
 
-        <div className={cx('inputArea')}>
+        <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>{groupType === 'NUMBER' ? '모둠원 수' : '모둠 수'}</span>
           <div className={cx('inputWrap', { blinking: groupNumber === 0})}>
             <input className={cx('input')} type="number" min={0} max={500} value={groupNumber} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'}/>
           </div>
         </div>
 
-        <div className={cx('buttonWrap')}>
+        <div className={cx('buttonWrap', mode)}>
           {
             mode === 'LIST' &&
             <button type="button" className={cx('button')} onClick={creatGroup}>만들기</button>
           }
           {
             mode === 'RESULT' &&
-            <button type="button" className={cx('button', 'reset')} onClick={reset}>초기화</button>
+            <button type="button" className={cx('button', 'reset')} onClick={reset}>다시 만들기</button>
           }
         </div>
 
