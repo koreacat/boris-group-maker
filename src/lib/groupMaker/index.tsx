@@ -15,7 +15,10 @@ const GroupMaker = () => {
 
   const getContents = () => {
     if (data.length === 0) return (
-      <div className={cx('emptyList')}>총 인원 수를 입력하고 숫자를 클릭해주세요.</div>
+      <div className={cx('emptyList')}>
+        <em className={cx('title')}>모둠 만들기</em>
+        <span className={cx('desc')}>총 인원 수를 입력하고 모둠원을 클릭해주세요.</span>
+      </div>
     )
 
     switch (mode) {
