@@ -16,6 +16,9 @@ interface SidebarProps {
 
 const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroupNumber, mode, setMode }: SidebarProps) => {
 
+  const totalNumberValue = `${data.length}`.replace(/(^0+)/, "");
+  const groupNumberValue = `${groupNumber}`.replace(/(^0+)/, "");
+
   const handleChangeNumber = (e: any) => {
     const number = e.target.value > 500 ? 500 : e.target.value;
     setData(new Array(Number(number)).fill({}).map((e, i) => { return { state: 'NOMAL', value: i + 1 } }));
@@ -79,7 +82,7 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
         <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>총 인원 수</span>
           <div className={cx('inputWrap', { blinking: data.length === 0 })}>
-            <input className={cx('input')} type="number" min={0} max={500} value={data.length} onChange={handleChangeNumber} disabled={mode === 'RESULT'} />
+            <input className={cx('input')} type="number" min={0} max={500} value={totalNumberValue} onChange={handleChangeNumber} disabled={mode === 'RESULT'} />
           </div>
         </div>
 
@@ -101,7 +104,7 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
         <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>{groupType === 'NUMBER' ? '모둠원 수' : '모둠 수'}</span>
           <div className={cx('inputWrap', { blinking: groupNumber === 0 })}>
-            <input className={cx('input')} type="number" min={0} max={500} value={groupNumber} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'} />
+            <input className={cx('input')} type="number" min={0} max={500} value={groupNumberValue} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'} />
           </div>
         </div>
 
