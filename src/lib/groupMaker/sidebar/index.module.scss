@@ -70,10 +70,6 @@
             cursor: not-allowed;
           }
         }
-
-        &.blinking {
-          animation: blink 1s ease-in-out infinite alternate;
-        }
       }
     }
 
@@ -211,9 +207,4 @@
       }
     }
   }
-}
-
-@keyframes blink{
-  0% {border-color: #25282b;}
-  100% {border-color: 1;}
 }
