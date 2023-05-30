@@ -98,6 +98,7 @@ const GroupList = ({ data, groupNumber, groupType }: GroupListProps) => {
 
 
   const arrEls = arr.map((e, index) => {
+    if(e.length === 0) return null;
     return <Group
       key={index}
       index={index}

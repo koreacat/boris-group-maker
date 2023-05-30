@@ -24,7 +24,7 @@ var GroupMaker = function () {
     var _d = useState('LIST'), mode = _d[0], setMode = _d[1];
     var getContents = function () {
         if (data.length === 0)
-            return (_jsx("div", __assign({ className: cx('emptyList') }, { children: "\uCD1D \uC778\uC6D0 \uC218\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694." })));
+            return (_jsxs("div", __assign({ className: cx('emptyList') }, { children: [_jsx("em", __assign({ className: cx('title') }, { children: "\uBAA8\uB460 \uB9CC\uB4E4\uAE30" })), _jsx("span", __assign({ className: cx('desc') }, { children: "\uCD1D \uC778\uC6D0 \uC218\uB97C \uC785\uB825\uD558\uACE0 \uBAA8\uB460\uC6D0\uC744 \uD074\uB9AD\uD574\uC8FC\uC138\uC694." }))] })));
         switch (mode) {
             case 'LIST': return _jsx(PeopleList, { data: data, setData: setData });
             case 'RESULT': return _jsx(GroupList, { data: data, groupNumber: groupNumber, groupType: groupType });
