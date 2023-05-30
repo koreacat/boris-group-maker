@@ -182,9 +182,10 @@
 
     .mobileDescWrap {
       display: flex;
-      margin-top: 20px;
+      margin-top: 12px;
       justify-content: flex-end;
       gap: 12px;
+      font-size: 14px;
 
       @media (min-width:768px) {
         display: none;
@@ -192,10 +193,10 @@
 
       .rect {
         display: inline-block;
-        width: 16px;
-        height: 16px;
-        margin-right: 4px;
-        border: 2px solid #000000;
+        width: 14px;
+        height: 14px;
+        margin-right: 2px;
+        border: 1px solid #000000;
         border-radius: 4px;
         transform: translate(0, 1.5px);
 
