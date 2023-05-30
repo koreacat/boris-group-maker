@@ -120,7 +120,7 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
         </div>
 
         <ol className={cx('descWrap')}>
-          <strong className={cx('title')}>도움말</strong>
+          <li className={cx('title')}>도움말</li>
           <li className={cx('desc')}>1. 총 인원 수를 숫자로 입력해주세요.</li>
           <li className={cx('desc')}>2. 모둠 구성 방식을 선택하고, 한 모둠당 모둠원 수나 총 모둠 수를 입력해주세요.</li>
           <li className={cx('desc')}>
@@ -142,18 +142,18 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
         </ol>
 
         <ol className={cx('mobileDescWrap')}>
-          <div className={cx('rectTitleWrap')}>
+          <li className={cx('rectTitleWrap')}>
             <div className={cx('rect')} />
             <span className={cx('title')}>모둠원</span>
-          </div>
-          <div className={cx('rectTitleWrap')}>
+          </li>
+          <li className={cx('rectTitleWrap')}>
             <div className={cx('rect', 'yellow')} />
             <span className={cx('title')}>모둠장</span>
-          </div>
-          <div className={cx('rectTitleWrap')}>
+          </li>
+          <li className={cx('rectTitleWrap')}>
             <div className={cx('rect', 'gray')} />
             <span className={cx('title')}>제외</span>
-          </div>
+          </li>
         </ol>
       </div>
     </aside>
