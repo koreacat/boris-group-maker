@@ -29,7 +29,7 @@ const GroupMaker = () => {
 
   return (
     <div className={cx('groupMakerArea')}>
-      <div className={cx('groupMakerWrap')}>
+      <div className={cx('groupMakerWrap', mode)}>
         <div className={cx('resultArea')}>
           {getContents()}
         </div>
