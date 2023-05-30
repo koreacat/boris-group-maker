@@ -79,12 +79,12 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
   return (
     <aside className={cx('sidebarArea')}>
       <div className={cx('sidebarWrap', mode)}>
-        <div className={cx('inputArea', mode)}>
+        <label className={cx('inputArea', mode)}>
           <span className={cx('title')}>총 인원 수</span>
-          <label className={cx('inputWrap', { blinking: data.length === 0 })}>
+          <div className={cx('inputWrap', { blinking: data.length === 0 })}>
             <input className={cx('input')} type="number" min={0} max={500} value={totalNumberValue} onChange={handleChangeNumber} disabled={mode === 'RESULT'} />
-          </label>
-        </div>
+          </div>
+        </label>
 
         <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>모둠 구성 방식</span>
@@ -101,12 +101,12 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
           </div>
         </div>
 
-        <div className={cx('inputArea', mode)}>
+        <label className={cx('inputArea', mode)}>
           <span className={cx('title')}>{groupType === 'NUMBER' ? '모둠원 수' : '모둠 수'}</span>
-          <label className={cx('inputWrap', { blinking: groupNumber === 0 })}>
+          <div className={cx('inputWrap', { blinking: groupNumber === 0 })}>
             <input className={cx('input')} type="number" min={0} max={500} value={groupNumberValue} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'} />
-          </label>
-        </div>
+          </div>
+        </label>
 
         <div className={cx('buttonWrap', mode)}>
           {
