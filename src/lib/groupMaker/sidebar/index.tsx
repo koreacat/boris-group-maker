@@ -123,10 +123,11 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
 
         <ol className={cx('descWrap')}>
           <li className={cx('title')}>도움말</li>
-          <li className={cx('desc')}>1. 총 인원 수를 숫자로 입력해주세요.</li>
-          <li className={cx('desc')}>2. 모둠 구성 방식을 선택하고, 한 모둠당 모둠원 수나 총 모둠 수를 입력해주세요.</li>
+          <li className={cx('desc')}>1. 모둠 구성 방식을 선택하세요.</li>
+          <li className={cx('desc')}>2. 총 인원 수를 숫자로 입력하세요.</li>
+          <li className={cx('desc')}>3. 모둠원 수나 모둠 수를 입력하세요.</li>
           <li className={cx('desc')}>
-            3. 번호를 클릭하면{' '}
+            4. 번호를 클릭하면{' '}
             <div className={cx('rectTitleWrap')}>
               <div className={cx('rect')} />
               <span className={cx('title')}>모둠원</span>
@@ -140,7 +141,7 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
               <span className={cx('title')}>제외</span>
             </div>됩니다.
           </li>
-          <li className={cx('desc')}>4. 만들기를 클릭해주세요.</li>
+          <li className={cx('desc')}>5. 만들기를 클릭하세요.</li>
         </ol>
 
         <ol className={cx('mobileDescWrap')}>
