@@ -84,10 +84,6 @@
           font-size: 14px;
         }
 
-        input[type="radio"]+span {
-          color: #aaa;
-        }
-
         input[type="radio"]:checked+span {
           font-weight: bold;
           color: #25282b;
