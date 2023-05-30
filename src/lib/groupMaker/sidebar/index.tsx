@@ -79,13 +79,6 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
   return (
     <aside className={cx('sidebarArea')}>
       <div className={cx('sidebarWrap', mode)}>
-        <label className={cx('inputArea', mode)}>
-          <span className={cx('title')}>총 인원 수</span>
-          <div className={cx('inputWrap', { blinking: data.length === 0 })}>
-            <input className={cx('input')} type="number" min={0} max={500} value={totalNumberValue} onChange={handleChangeNumber} disabled={mode === 'RESULT'} />
-          </div>
-        </label>
-
         <div className={cx('inputArea', mode)}>
           <span className={cx('title')}>모둠 구성 방식</span>
 
@@ -101,12 +94,21 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
           </div>
         </div>
 
-        <label className={cx('inputArea', mode)}>
-          <span className={cx('title')}>{groupType === 'NUMBER' ? '모둠원 수' : '모둠 수'}</span>
-          <div className={cx('inputWrap', { blinking: groupNumber === 0 })}>
-            <input className={cx('input')} type="number" min={0} max={500} value={groupNumberValue} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'} />
-          </div>
-        </label>
+        <div className={cx('numberArea')}>
+          <label className={cx('inputArea', mode)}>
+            <span className={cx('title')}>총 인원 수</span>
+            <div className={cx('inputWrap', { blinking: data.length === 0 })}>
+              <input className={cx('input')} type="number" min={0} max={500} value={totalNumberValue} onChange={handleChangeNumber} disabled={mode === 'RESULT'} />
+            </div>
+          </label>
+
+          <label className={cx('inputArea', mode)}>
+            <span className={cx('title')}>{groupType === 'NUMBER' ? '모둠원 수' : '모둠 수'}</span>
+            <div className={cx('inputWrap', { blinking: groupNumber === 0 })}>
+              <input className={cx('input')} type="number" min={0} max={500} value={groupNumberValue} onChange={handleChangeGroupNumber} disabled={mode === 'RESULT'} />
+            </div>
+          </label>
+        </div>
 
         <div className={cx('buttonWrap', mode)}>
           {
