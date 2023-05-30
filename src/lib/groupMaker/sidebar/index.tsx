@@ -85,11 +85,11 @@ const Sidebar = ({ data, setData, groupType, setGroupType, groupNumber, setGroup
           <div className={cx('radioArea')}>
             <label className={cx('radioWrap')}>
               <input className={cx('radio')} type="radio" name="groupType" value="NUMBER" onChange={handleChangeGroupType} checked={groupType === 'NUMBER'} disabled={mode === 'RESULT'} />
-              <span className={cx('radioTitle')}>한 모둠당 모둠원 수</span>
+              <span className={cx('radioTitle')}>모둠 내 인원</span>
             </label>
             <label className={cx('radioWrap')}>
               <input className={cx('radio')} type="radio" name="groupType" value="GROUP" onChange={handleChangeGroupType} checked={groupType === 'GROUP'} disabled={mode === 'RESULT'} />
-              <span className={cx('radioTitle')}>총 모둠 수</span>
+              <span className={cx('radioTitle')}>모둠 수</span>
             </label>
           </div>
         </div>
